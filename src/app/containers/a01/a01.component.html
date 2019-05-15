@@ -1,0 +1,146 @@
+<app-container>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div>
+        <div class="panel-heading text-center">
+          <h1><strong>Formulario de Encuesta</strong></h1>
+          <br />
+          <h4>1° Parte: El uso de las palabras</h4>
+          <p>
+            Los chicos(as) suelen en tender más palabras de las que dicen.
+            Queremos saber cuáles son las palabras que tu hijo(a)
+            <strong>DICE</strong>. Muchas veces, los nenes/as usan palabras
+            distintas de las que a parecen en esta lista. Por ejemplo, pueden
+            decir “pupo” en vez de “ombligo”, o “coche” en vez de “auto”.
+            También pronuncian las palabras de diferentes formas. Por ejemplo,
+            pueden decir “efante” en vez de “elefante”, o "pato" en vez de
+            "zapato". rellená el círculo de la palabra correspondiente. Acordate
+            de que esta lista incluye palabras que muchos chicos(as) pueden
+            decir.
+            <strong
+              >No te preocupes si tu hijo(a) no dice todas las palabras.</strong
+            >
+          </p>
+        </div>
+        <br />
+        <br />
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong>Sonidos de cosas y animales (12)</strong>
+            </div>
+            <br />
+            <div class="panel-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input
+                              type="checkbox"
+                              value=""
+                              [(ngModel)]="formA01.am"
+                            />¡am!
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.cuaCua"/>cua-cuá
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label> <input type="checkbox" value="" [(ngModel)]="formA01.muu"/>muu </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.qui_qui_ri_qui"/>qui-qui-ri-qui
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.ay"/>¡ay!
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.guauGuau_baBau"/>guau-guau/ba-bau
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.pio_pio"/>pio-pio
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.rum_rum"/>rum-rum (coche)
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.bee_mee"/>bee-mee
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.miau"/>miau
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.pum"/>¡pum!
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="" [(ngModel)]="formA01.tu_tu"/>tu-tú
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.table-responsive -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1 mb-4">
+          <input type="button" value="Siguiente" (click)="updateSurvey()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.col-lg-12 -->
+</div>
+</app-container>

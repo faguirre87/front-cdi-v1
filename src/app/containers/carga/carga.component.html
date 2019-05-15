@@ -1,0 +1,100 @@
+<app-container>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <!--aca va el formulario de inscripcion al niño-->
+          <div class="py-5 text-center">
+            <h1>ALTA de Formulario</h1>
+            <br />
+            <h2>Instrucciones</h2>
+            <p class="lead">
+              Anotá la fecha de nacimiento. Leé todas las instrucciones con
+              cuidado. Asegurate de llenar todas las páginas de este
+              cuestionario. No marques palabras que sean solamente imitaciones
+            </p>
+            <h6 style="color: red;"><strong>(*) CAMPOS OBLIGATORIOS</strong></h6>
+          </div>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="firstName">Nombre del niño o niña (*)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder=""
+                  value=""
+                  [(ngModel)]="datos.name"
+                  [ngModelOptions]="{standalone: true}"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="lastName">Numero de identificación (*)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder=""
+                  value=""
+                  required
+                  [(ngModel)]="datos.dni"
+                  [ngModelOptions]="{standalone: true}"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-5">
+                <label for="country">Sexo (*)</label>
+                <select
+                  class="custom-select d-block w-100"
+                  id="country"
+                  required
+                  [(ngModel)]="datos.gender"
+                  [ngModelOptions]="{standalone: true}"
+                >
+                  <option [value]="''">Seleccionar</option>
+                  <option [value]="'female'">Femenino</option>
+                  <option [value]="'male'">Masculino</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2">
+                <label for="fecha">Fecha de Nacimiento (*)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fecha"
+                  placeholder="dd/mm/aaaa"
+                  value=""
+                  required
+                  [(ngModel)]="datos.birthday"
+                  [ngModelOptions]="{standalone: true}"
+                />
+              </div>
+              <div class="col-md-3 mb-5">
+                <label for="edadenmeses">Edad en meses (*)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="edadenmeses"
+                  placeholder=""
+                  value=""
+                  required
+                  [(ngModel)]="datos.age"
+                  [ngModelOptions]="{standalone: true}"
+                />
+              </div>
+              <div class="col-md-1 mb-4">
+                <input class="btn btn-primary" type="button" value="Siguiente" (click)="postDatos()"/>
+              </div>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.col-lg-12 -->
+  </div>
+</app-container>

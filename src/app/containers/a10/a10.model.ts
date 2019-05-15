@@ -1,0 +1,32 @@
+export class A10Model {
+    arbol: boolean;
+    arena: boolean;
+    bandera: boolean;
+    cielo: boolean;
+    cucha: boolean;
+    estrella: boolean;
+    flor: boolean;
+    fuego: boolean;
+    hamaca: boolean;
+    hojas: boolean;
+    humo: boolean;
+    lluvia: boolean;
+    luna: boolean;
+    maceta: boolean;
+    manguera: boolean;
+    nieve: boolean;
+    nube: boolean;
+    pala: boolean;
+    palo: boolean;
+    pasto: boolean;
+    piedra: boolean;
+    piletaNatacion_pile: boolean;
+    planta: boolean;
+    reja: boolean;
+    sol: boolean;
+    techo: boolean;
+    tierra_barro: boolean;
+    timbre: boolean;
+    tobogan: boolean;
+    viento_aire: boolean;
+}

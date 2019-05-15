@@ -1,0 +1,466 @@
+<app-container>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">
+            <h2>INFORMACIÓN GENERAL</h2>
+            <h6 style="color: red;"><strong>(*) CAMPOS OBLIGATORIOS</strong></h6>
+          </div>
+          <br>
+          <!--Formulario para los niños/as-->
+          <form action="" >
+            <h4>DATOS DEL NIÑO O LA NIÑA</h4>
+            <br><br>
+            <div class="row">
+              <div class="col-sm-8" >
+                <label for="nombreNino">Nombre (no es necesario el apellido)(*):</label>
+                <input type="text" class="form-control" id="nombreNino" name="nombreNino" [(ngModel)]="mostrarDatos.name">
+              </div>
+              <label for="sexo">Sexo (*):</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="masculino" id="sexo" [value]="'male'" [(ngModel)]="mostrarDatos.gender">
+                <label class="form-check-label" for="inlineRadio1">Masculino</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="femenino" id="femenino" [value]="'femenine'" [(ngModel)]="mostrarDatos.gender">
+                <label class="form-check-label" for="inlineRadio1">Femenino</label>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4" >
+                <label for="fecha">Fecha de Nacimiento (*):</label>
+                <input type="text" class="form-control" name="fecha" id="fecha" placeholder="dd/mm/aaaa" [(ngModel)]="mostrarDatos.birthday" required>
+              </div>
+              <div class="col-sm-2" >
+                <label for="edad">Edad (*):</label>
+                <input type="text" class="form-control" name="edad" id="edad" [(ngModel)]="mostrarDatos.age" required>
+              </div>
+              <div class="col-sm-6" >
+                <label for="lugar_nacimiento">Lugar de Nacimiento (*):</label>
+                <input type="text" class="form-control" name="lugar_nacimiento" id="lugar_nacimiento" [(ngModel)]="mostrarDatos.birthPlace" required>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-6" >
+                <label for="cantidad_niño"> ¿Cuántos niños/as hay en tu familia?:</label>
+                <input type="text" class="form-control" name="cantidad_niño" id="cantidad_niño" placeholder="" [(ngModel)]="mostrarDatos.childrenQuantity">
+              </div>
+              <div class="col-sm-6" >
+                <label for="conNiño">¿Quienes viven con el niño/a?</label>
+                <input type="text" class="form-control" name="conNiño" id="conNiño" > <!--[(ngModel)]="mostrarDatos.childKeeper"--->
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <label for="ordenNac">Orden de nacimiento del niño/a:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Radio1" id="Radio1" [value]="1" [(ngModel)]="mostrarDatos.birthOrder">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Radio2" id="Radio2" [value]="2" [(ngModel)]="mostrarDatos.birthOrder">
+                <label class="form-check-label" for="inlineRadio1">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Radio3" id="Radio3" [value]="3" [(ngModel)]="mostrarDatos.birthOrder">
+                <label class="form-check-label" for="inlineRadio1">3</label>
+              </div>
+              <div class="col-sm-2" >
+                <label for="otroRadio1">Otro (especifique en nro):</label>
+                <input type="text"   class="form-control" [(ngModel)]="mostrarDatos.birthOrder">
+              </div> <!-- [value]="4"name="otroRadio1" id="otroRadio1" --->
+            </div>
+            <br>
+            <div class="row">
+              <label for=""> ¿Con quién pasa el/la niño/a la mayor parte del día?:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="pasaDia" id="PasaDia" [value]="'madre'" [(ngModel)]="mostrarDatos.childKeeper">
+                <label class="form-check-label" for="inlineRadio1">Mamá</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="pasaDia" id="pasaDia" [value]="'padre'" [(ngModel)]="mostrarDatos.childKeeper">
+                <label class="form-check-label" for="inlineRadio1">Papá</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="pasaDia" id="pasaDia" [value]="'abuelo'" [(ngModel)]="mostrarDatos.childKeeper">
+                <label class="form-check-label" for="inlineRadio1">Abuela/o</label>
+              </div>
+              <div class="col-sm-4" >
+                <label for="otroRadio">Otro/a (especifique):</label>
+                <input type="text" class="form-control" name="otroRadio" id="otroRadio"[(ngModel)]="mostrarDatos.anotherChildKeeper">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <label for="">¿Tu hijo/a va a la guardería?: <br> </label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="guarderíaSI" id="guarderíaSI" [value]="true"  [(ngModel)]="mostrarDatos.kinderGarden">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="guarderíaNO" id="guarderíaNO" [value]="false"  [(ngModel)]="mostrarDatos.kinderGarden">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+              </div>
+              <label for=""><strong>Si contestaste " sí", ¿desde cuándo?: <br></strong></label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="menos6" id="menos6" [value]="'menos de 6 meses'" [(ngModel)]="mostrarDatos.kinderGardenSince">
+                <label class="form-check-label" for="inlineRadio1">Menos de 6 meses</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mas6" id="mas6" [value]="'mas de 6 meses'" [(ngModel)]="mostrarDatos.kinderGardenSince">
+                <label class="form-check-label" for="inlineRadio1">Más de 6 meses</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mas1" id="mas1" [value]="'mas de un año'" [(ngModel)]="mostrarDatos.kinderGardenSince">
+                <label class="form-check-label" for="inlineRadio1">Más de 1 año</label>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4" >
+                <label for="">¿Cuántas horas al día?:</label>
+                <input type="text" class="form-control" name="horasAlDia" id="horasAlDia" placeholder="" [(ngModel)]="mostrarDatos.kinderGardenHoursPerDay">
+              </div>
+              <div class="col-sm-4" >
+                <label for="">¿Cuántas veces por semana?:</label>
+                <input type="text" class="form-control" name="cantPorSemana" id="cantPorSemana" [(ngModel)]="mostrarDatos.kinderGardenHoursPerWeek">
+              </div>
+
+            </div>
+            <br>
+            <h5>Contacto con otras lenguas</h5>
+            <div class="row">
+              <label for="">¿El niño/a tiene contacto con lenguas que no sean el español?: <br></label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" [value]="'true'" [(ngModel)]="mostrarDatos.languangesContact">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" [value]="'false'" [(ngModel)]="mostrarDatos.languangesContact">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-6" >
+                <label for=""> <strong>Si contestaste "sí",</strong> ¿con qué lengua o lenguas tiene contacto?: <br></label>
+                <input type="text" class="form-control" name="lengua" id="lengua" placeholder=""  [(ngModel)]="mostrarDatos.languanges">
+              </div>
+              <div class="col-sm-4" >
+                <label for="">¿Desde qué edad?(en meses):</label>
+                <input type="text" class="form-control" name="desdeQueEdad" id="desdeQueEdad" placeholder=""  [(ngModel)]="mostrarDatos.languangesAge">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4" >
+                <label for="">¿Con quién/quiénes la habla?:</label>
+                <input type="text" class="form-control" name="conQuienes" id="conQuienes" placeholder=""  [(ngModel)]="mostrarDatos.languangeSpeaker">
+              </div>
+            </div>
+            <br>
+            <h5>Información sobre la salud del niño o la niña</h5>
+            <div class="row">
+              <label>¿Nació antes de los nueve meses?: <br></label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadio01" id="inlineRadio01" [value]="true"  [(ngModel)]="mostrarDatos.premature">
+                <label class="form-check-label" for="inlineRadio01">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadio01" id="inlineRadio01" [value]="false" [(ngModel)]="mostrarDatos.premature">
+                <label class="form-check-label" for="inlineRadio01">No</label>
+              </div>
+              <div class="col-sm-4" >
+                <label for="">¿Con cuantas semanas de gestación?</label>
+                <input type="text" class="form-control" name="semanasGestacion" id="semanasGestacion" placeholder=""  [(ngModel)]="mostrarDatos.gestationWeeks">
+              </div>
+
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4" >
+                <label for="">¿Cuánto pesó al nacer? (en gramos):</label>
+                <input type="text" class="form-control" name="cuantoPeso" id="cuantoPeso" placeholder=""  [(ngModel)]="mostrarDatos.birthWeight">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <label for="">¿Tuvo alguna enfermedad o problema de audición o lenguaje?:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="healthProblem" id="healthProblem" [value]="true"  [(ngModel)]="mostrarDatos.healthProblem">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="healthProblem" id="healthProblem" [value]="false" [(ngModel)]="mostrarDatos.healthProblem">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+              </div>
+              <div class="col-sm-6" >
+                <label for="">Si contestaste "sí", por favor describí el problema:</label>
+                <input type="text" class="form-control" name="problema" id="problema" placeholder="" [(ngModel)]="mostrarDatos.descriptionHealthProblem">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <label for="">¿Tuvo infecciones de oído?: <br></label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="earInfection" id="earInfection" [value]="true">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="earInfection" id="earInfection" [value]="false">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+              </div>
+              <div class="col-sm-4" >
+                <label for="">Si contestaste "sí", ¿cuántas por año?:</label>
+                <input type="text" class="form-control" name="cantInfecciones" id="cantInfecciones" placeholder="" [(ngModel)]="mostrarDatos.countHearingDisease">
+              </div>
+
+            </div>
+            <br>
+            <div class="row">
+              <label for="">¿Tuvo algún problema de salud importante antes, durante o después del nacimiento?: <br></label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anyDisease" id="anyDisease" [value]="true" [(ngModel)]="mostrarDatos.anyDisease">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anyDisease" id="anyDisease" [value]="false" [(ngModel)]="mostrarDatos.anyDisease">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+              </div>
+              <div class="col-sm-4" >
+                <label for="">Por favor, describí el problema:</label>
+                <input type="text" class="form-control" name="problema" id="problema" placeholder="" [(ngModel)]="mostrarDatos.descriptionDisease">
+              </div>
+
+            </div>
+
+
+          </form>
+          <br>
+          <br>
+          <!--Formulario para los padres-->
+          <form action="">
+            <h4>DATOS DE LOS PADRES</h4>
+            <br><br>
+            <h5 class="text-center">MADRE</h5>
+            <div class="row">
+              <div class="col">
+                <label for="">Nombre (*)</label>
+                <input type="text" class="form-control" id="nombreMadre" placeholder="" [(ngModel)]="mostrarDatos.nameTutor1">
+              </div>
+              <div class="col">
+                <label for="">Lugar de origen (*)</label>
+                <input type="text" class="form-control" id="lugarOrigenMadre" placeholder="" [(ngModel)]="mostrarDatos.birthPlaceTutor1">
+              </div>
+            </div>
+            <br>
+            <h5 class="text-center">PADRE</h5>
+            <div class="row">
+              <div class="col">
+                <label for="">Nombre (*)</label>
+                <input type="text" class="form-control" id="nombrePadre"  placeholder="" [(ngModel)]="mostrarDatos.nameTutor2">
+              </div>
+              <div class="col">
+                <label for="">Lugar de origen (*)</label>
+                <input type="text" class="form-control" id="lugarOrigenPadre" placeholder="" [(ngModel)]="mostrarDatos.birthPlaceTutor2">
+              </div>
+            </div>
+            <br>
+            <label for="">Persona que contesto la encuesta (*) <br></label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="contestoMadre" id="contestoMadre" [value]="'mama'" [(ngModel)]="mostrarDatos.surveyAnswer">
+              <label class="form-check-label" for="inlineRadio1">madre</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="contestoPadre" id="contestoPadre" [value]="'papa'" [(ngModel)]="mostrarDatos.surveyAnswer">
+              <label class="form-check-label" for="inlineRadio2">padre</label>
+            </div>
+
+
+        <br>
+        <h5>Ocupación</h5>
+        <p>Por favor indicá con claridad el trabajo del padre y de la madre. Por ejemplo si es empleado/ a, indicá también en
+          donde trabaja (por ejemplo, en un negocio de ropa, o en una casa de familia; o si es maestro/a, indicá también el
+          nivel (inicial, primaria, secundaria, etc.)).</p>
+        <h5 class="text-center">MADRE</h5>
+        <div class="row">
+          <div class="col">
+            <label for="">Ocupación (*)</label>
+            <input type="text" class="form-control" id="ocupacionMadre" placeholder="" [(ngModel)]="mostrarDatos.ocupationTutor1">
+          </div>
+<!--            <div class="col">
+            <label for="">Breve descripción</label>
+            <input type="text" class="form-control" id="descripcionMadre" placeholder="" [(ngModel)]="mostrarDatos.educationTutor1">
+          </div>-->
+        </div>
+        <br>
+        <h5 class="text-center">PADRE</h5>
+        <div class="row">
+          <div class="col">
+            <label for="">Ocupación (*)</label>
+            <input type="text" class="form-control" id="ocupacionPadre" placeholder="" [(ngModel)]="mostrarDatos.ocupationTutor2">
+          </div>
+  <!--        <div class="col">
+            <label for="">Breve descripción</label>
+            <input type="text" class="form-control" id="descripcionPadre" placeholder="" [(ngModel)]="mostrarDatos.educationTutor2">
+          </div>-->
+        </div>
+        <br>
+        <h5>Escolaridad</h5>
+        <p>Por favor, indicá el nivel más alto de escolaridad alcanzado.</p>
+        <br>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col" class="text-center">MADRE</th>
+            <th scope="col" class="text-center">PADRE</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'incomplete primary School'" aria-label="...">
+                Primaria Incompleta
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'incomplete primary School'" aria-label="...">
+                Primaria Incompleta
+              </div>
+            </td>
+
+
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'primary School'" aria-label="...">
+                Primaria Completa
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'primary School'" aria-label="...">
+                Primaria Completa
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'incomplete secondary School'" aria-label="...">
+                Secundaria Incompleta
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'incomplete secondary School'" aria-label="...">
+                Secundaria Incompleta
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'secondary School'" aria-label="...">
+                Secundaria Completa
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'secondary School'" aria-label="...">
+                Secundaria Completa
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'incomplete tertiary School'" aria-label="...">
+                Terciario Incompleto
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'incomplete tertiary School'" aria-label="...">
+                Terciario Incompleto
+              </div>
+            </td>
+
+
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'tertiary School'" aria-label="...">
+                Terciario Completo
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'tertiary School'" aria-label="...">
+                Terciario Completo
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'imcomplete university'" aria-label="...">
+                Universitario Incompleto
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'imcomplete university'" aria-label="...">
+                Universitario Incompleto
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadioMadre" id="blankRadioMadre" [value]="'university'" aria-label="...">
+                Universitario Completo
+              </div>
+            </td>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" [value]="'university'" aria-label="...">
+                Universitario Completo
+              </div>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+        </form>
+
+
+
+
+      </div>
+      <p>(*) CAMPOS OBLIGATORIOS</p>
+      <div  class="col-md-6 mb-4">
+        <button type="button" class="btn btn-primary" (click)="sendForm()">Guardar</button>
+        
+      </div>
+
+    </div>
+    <!-- /.col-lg-12 -->
+  </div>
+
+
+
+
+
+</app-container>

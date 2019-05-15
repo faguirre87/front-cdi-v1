@@ -1,0 +1,212 @@
+<app-container>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div >
+              <div class="panel-heading text-center">
+                <h1><strong>Formulario de Encuesta</strong></h1>
+              </div>
+              <br>
+              <br>
+              <div class="col-lg-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Lugares fuera de la casa (22)</strong>
+                  </div>
+                  <br>
+                  <!-- /.panel-heading -->
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <tbody>
+                        <tr class="warning">
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA11.banco">banco
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.cerro_montana">cerro/montaña
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.iglesia_templo">iglesia/templo
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.rio">río
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.bosque">bosque
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.circo">circo
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.jardin">jardín
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.supermercado_super">supermercado/súper
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="warning">
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.calesita">calesita
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.cumpleanos_cumple">cumpleaños/cumple
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.mar">mar
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.vereda">vereda
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.calle">calle
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.escuela_cole">escuela/cole
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.pelotero">pelotero
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.zoologico">zoológico
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="warning">
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.campo">campo
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.fiesta">fiesta
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.playa">playa
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.casa">casa
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.hospital_clinica">hospital/clínica
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA11.plaza">plaza
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                  </div>
+                  <!-- /.panel-body -->
+                </div>
+              </div>
+
+              <div class="col-md-1 mb-4">
+                <input type="button" value="Siguiente" (click)="updateSurvey()">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+
+
+
+
+</app-container>

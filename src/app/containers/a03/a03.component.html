@@ -1,0 +1,159 @@
+<app-container>
+  <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div >
+              <div class="panel-heading text-center">
+                <h1><strong>Formulario de Encuesta</strong></h1>
+              </div>
+              <br>
+              <br>
+              <div class="col-lg-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Vehículos de verdad y de juguete (16)</strong>
+                  </div>
+                  <br>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <tbody>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""[(ngModel)]="formA03.ambulancia">ambulancia
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.barco">barco
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.cochecitoDeBebe">cochecito de bebé
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.tractor">tractor
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.auto">auto
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.bicicleta_bici">bicicleta/bici
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.helicoptero">helicóptero
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.tren">tren
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.autoPolicia">auto de policía
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.camion">camión
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.micro_colectivo" >micro/colectivo
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""  [(ngModel)]="formA03.triciclo" >triciclo
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""  [(ngModel)]="formA03.avion" >avión
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""  [(ngModel)]="formA03.camionDeBomberos" >camión de bomberos
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value=""  [(ngModel)]="formA03.moto" >moto
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="" [(ngModel)]="formA03.taxi" >taxi
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-1 mb-4">
+                <input type="button" value="Siguiente" (click)="updateSurvey()">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+</app-container>

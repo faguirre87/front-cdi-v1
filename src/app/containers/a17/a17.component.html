@@ -1,0 +1,166 @@
+<app-container>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div>
+          <div class="panel-heading text-center">
+            <h1><strong>Formulario de Encuesta</strong></h1>
+          </div>
+          <br />
+          <br />
+          <div class="col-lg-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <strong>Palabras sobre el tiempo (11)</strong>
+              </div>
+              <br />
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <tbody>
+                      <tr class="warning">
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.aLaManana"
+                              />a la mañana
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.ahora"
+                              />ahora
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.despues"
+                              />después
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.manana"
+                              />mañana
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.aLaNoche"
+                              />a la noche
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.anos"
+                              />años
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.dia"
+                              />día
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.noche"
+                              />noche
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="warning">
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.aLatarde"
+                              />a la tarde
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.ayer"
+                              />ayer
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA17.hoy"
+                              />hoy
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-md-1 mb-4">
+           <input type="button" value="Siguiente" (click)="updateSurvey()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.col-lg-12 -->
+  </div>
+</app-container>

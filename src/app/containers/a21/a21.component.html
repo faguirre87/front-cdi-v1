@@ -1,0 +1,228 @@
+<app-container>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div>
+          <div class="panel-heading text-center">
+            <h1><strong>Formulario de Encuesta</strong></h1>
+          </div>
+          <br />
+          <br />
+          <div class="col-lg-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <strong>Cuantificadores y adverbios (16)</strong>
+              </div>
+              <br />
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <tbody>
+                      <tr class="warning">
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.asi"
+                              />así
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                value=""
+                                [(ngModel)]="formA21.mas"
+                              />más
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                value=""
+                                [(ngModel)]="formA21.noHay"
+                              />no hay
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                value=""
+                                [(ngModel)]="formA21.si"
+                              />sí (afirmación)
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                value=""
+                                [(ngModel)]="formA21.bien"
+                              />bien
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                value=""
+                                [(ngModel)]="formA21.mucho"
+                              />mucho
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.otro_otraVez"
+                              />otro/otra vez
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.todavia"
+                              />todavía
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="warning">
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.despacio"
+                              />despacio
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.nada"
+                              />nada
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.poco_poquito"
+                              />poco/poquito
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.todo"
+                              />todo
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.mal"
+                              />mal
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.no"
+                              />no
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.rapido"
+                              />rápido
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="checkbox">
+                            <label>
+                              <input
+                                type="checkbox"
+                                value=""
+                                [(ngModel)]="formA21.ya"
+                              />ya
+                            </label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-md-1 mb-4">
+            <input type="button" value="Siguiente" (click)="updateSurvey()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.col-lg-12 -->
+  </div>
+</app-container>

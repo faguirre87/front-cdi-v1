@@ -1,0 +1,36 @@
+export class A05Model {
+    anteojos_lentes: boolean;
+    aros: boolean;
+    babero: boolean;
+    bombacha: boolean;
+    botas: boolean;
+    boton: boolean;
+    bufanda: boolean;
+    buzo: boolean;
+    calzoncillo: boolean;
+    camisa: boolean;
+    campera: boolean;
+    cartera: boolean;
+    cierre: boolean;
+    collar: boolean;
+    gorra_gorro: boolean;
+    guantes: boolean;
+    hebilla_gomita: boolean;
+    malla: boolean;
+    medias: boolean;
+    mochila: boolean;
+    ojotas: boolean;
+    pantalon: boolean;
+    panal: boolean;
+    pijama: boolean;
+    polera: boolean;
+    pullover: boolean;
+    remera: boolean;
+    ropa: boolean;
+    saco: boolean;
+    shorts: boolean;
+    sombrero: boolean;
+    vestido: boolean;
+    zapatilla: boolean;
+    zapato: boolean;
+}
